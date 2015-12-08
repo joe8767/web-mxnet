@@ -1,0 +1,11 @@
+from flask import Flask,request
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "<span style='color:red'>Nginx Works</span><br><span style='color:green'>uwsgi Works</span><br><span style='color:blue'>Flask Works</span><br>from web root！Try to visit http://host:port/parameter"
+
+@app.route('/<parameter>')
+def index(parameter):
+    return "<span style='color:red'>Hello World From Flask</span><br>Parameter:{0}".format(parameter)
