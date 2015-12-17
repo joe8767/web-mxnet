@@ -14,10 +14,12 @@ To specify nginx http port, just edit /etc/nginx/nginx.conf Line 12
 default port is modified to 80
 
 If you want run with your own Flask project, just using 
-sudo docker -v yourFlaskPrjPath:~/webroot
+sudo docker -v yourFlaskPrjPath:/root/webroot
 and make sure that your entry py file is named to ”main.py"
 and the app object is named to "app" 
 
+### run example
+sudo docker run -it -p 8888:8888 -p 9999:80 -v yourFlaskPrjPath:/root/webroot --device /dev/nvidiactl --device /dev/nvidia-uvm --device /dev/nvidia0 joe8767/web-mxnet-gpu
 
 Explanation of testserver.ini
 # uwsgi socket ip

@@ -1,2 +1,8 @@
-完整安装了三个组件
-并且添加了一个文件到home
+Based on kaixhin/cuda-mxnet
+
+ngnix+uwsgi+flask installed as web components
+
+mxnet with GPU supported installed
+
+default web application deploy folder setted to /root/webroot
+
